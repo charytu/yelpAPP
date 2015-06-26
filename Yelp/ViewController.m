@@ -69,18 +69,14 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
     [self.YelpTableView reloadData];
 }
 
-
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"search TEXT:%@",searchBar.text);
+    [self updateTable:searchBar.text params:nil];
+}
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
-  
-    //NSString *searchString = [self.mySearchController.searchBar text];
-    NSString *searchString = searchController.searchBar.text;
-    NSLog(@"search :%@", searchString);
-    
-   // [self updateTable:searchString];
-    //[self searchForText:searchString scope:searchController.searchBar.selectedScopeButtonIndex];
-   // [self.YelpTableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {
