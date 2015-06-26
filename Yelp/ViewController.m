@@ -112,7 +112,7 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
     float distance = [business[@"distance"] integerValue] * 0.000621371;
     cell.distanceLabel.text = [NSString stringWithFormat:@"%0.2f", distance];
     cell.storeLable.text = business[@"name"];
-    cell.reviewLabel.text = [NSString stringWithFormat:@"%ld", [business[@"review_count"] integerValue]];
+    cell.reviewLabel.text = [NSString stringWithFormat:@"%ld reviews", [business[@"review_count"] integerValue]];
     NSString *posterURLString = business[@"image_url"];
     [cell.posterView setImageWithURL:[NSURL URLWithString:posterURLString]];
    
